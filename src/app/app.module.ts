@@ -7,10 +7,16 @@ import { MaterialModule } from './modules/material/material.module';
 import { RoutingModule } from './modules/routing/routing.module';
 
 import { AppComponent } from './app.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { CodeComponent } from './components/code/code.component';
+import { HistoryListComponent } from './components/history-list/history-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent,
+    CodeComponent,
+    HistoryListComponent
   ],
   imports: [
     BrowserModule,
