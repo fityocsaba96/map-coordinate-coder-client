@@ -1,0 +1,6 @@
+<h3 mat-subheader>Map</h3>
+<mat-list-item id="map">
+  <agm-map [latitude]="coordinate? coordinate.latitude : 0" [longitude]="coordinate? coordinate.longitude : 0">
+    <agm-marker [latitude]="coordinate? coordinate.latitude : 0" [longitude]="coordinate? coordinate.longitude : 0"></agm-marker>
+  </agm-map>
+</mat-list-item>
