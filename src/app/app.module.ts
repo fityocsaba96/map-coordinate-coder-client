@@ -10,13 +10,16 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { CodeComponent } from './components/code/code.component';
 import { HistoryListComponent } from './components/history-list/history-list.component';
+import { HistoryComponent } from './components/history/history.component';
+import { HistoryService } from './services/history.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     CodeComponent,
-    HistoryListComponent
+    HistoryListComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,9 @@ import { HistoryListComponent } from './components/history-list/history-list.com
       apiKey: 'AIzaSyB05BGG8vL_vhk6rj4DaX0AQ1PEL3DgweI'
     })
   ],
-  providers: [],
+  providers: [
+    HistoryService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

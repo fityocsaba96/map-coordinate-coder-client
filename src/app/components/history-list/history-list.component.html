@@ -1,3 +1,7 @@
-<p>
-  history-list works!
-</p>
+<mat-list *ngIf="historyList">
+  <h3 mat-subheader>Encoded</h3>
+  <app-history *ngFor="let history of historyList.encode" [history]="history" [type]="historyType.Encode"></app-history>
+  <mat-divider></mat-divider>
+  <h3 mat-subheader>Decoded</h3>
+  <app-history *ngFor="let history of historyList.decode" [history]="history" [type]="historyType.Decode"></app-history>
+</mat-list>

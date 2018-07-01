@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HistoryList } from '../../models/HistoryList';
+import { HistoryService } from '../../services/history.service';
+import { HistoryType } from '../../models/HistoryType';
 
 @Component({
   selector: 'app-history-list',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HistoryListComponent implements OnInit {
 
-  constructor() { }
+  public historyList: HistoryList;
+  public historyType = HistoryType;
+
+  constructor(
+    private historyService: HistoryService
+  ) { }
 
   ngOnInit() {
+    this.historyService.getAllHistory().subscribe(response => {
+      this.historyList = response;
+    });
   }
-
 }

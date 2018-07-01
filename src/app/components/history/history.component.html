@@ -1,0 +1,4 @@
+<mat-list-item>
+  <p mat-line *ngIf="type === historyType.Encode">{{history.coordinate.latitude}},{{history.coordinate.longitude}} → {{history.code}}</p>
+  <p mat-line *ngIf="type === historyType.Decode">{{history.code}} → {{history.coordinate.latitude}},{{history.coordinate.longitude}}</p>
+</mat-list-item>
