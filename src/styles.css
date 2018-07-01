@@ -6,3 +6,15 @@ body {
   font-family: Roboto, sans-serif;
   background-color: whitesmoke;
 }
+
+.fullWidth {
+  width: 100%;
+}
+
+.thirdWidth {
+  width: calc(100% / 3);
+}
+
+.mat-line {
+  margin-right: 20px !important;
+}

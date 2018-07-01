@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -12,6 +13,9 @@ import { CodeComponent } from './components/code/code.component';
 import { HistoryListComponent } from './components/history-list/history-list.component';
 import { HistoryComponent } from './components/history/history.component';
 import { HistoryService } from './services/history.service';
+import { EncodeComponent } from './components/encode/encode.component';
+import { NotifierService } from './services/notifier.service';
+import { CodeService } from './services/code.service';
 
 @NgModule({
   declarations: [
@@ -19,10 +23,12 @@ import { HistoryService } from './services/history.service';
     MenuComponent,
     CodeComponent,
     HistoryListComponent,
-    HistoryComponent
+    HistoryComponent,
+    EncodeComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     RoutingModule,
     MaterialModule,
     HttpClientModule,
@@ -32,7 +38,9 @@ import { HistoryService } from './services/history.service';
     })
   ],
   providers: [
-    HistoryService
+    NotifierService,
+    HistoryService,
+    CodeService
   ],
   bootstrap: [AppComponent]
 })
