@@ -14,6 +14,7 @@ import { HistoryListComponent } from './components/history-list/history-list.com
 import { HistoryComponent } from './components/history/history.component';
 import { HistoryService } from './services/history.service';
 import { EncodeComponent } from './components/encode/encode.component';
+import { DecodeComponent } from './components/decode/decode.component';
 import { NotifierService } from './services/notifier.service';
 import { CodeService } from './services/code.service';
 
@@ -24,7 +25,8 @@ import { CodeService } from './services/code.service';
     CodeComponent,
     HistoryListComponent,
     HistoryComponent,
-    EncodeComponent
+    EncodeComponent,
+    DecodeComponent
   ],
   imports: [
     BrowserModule,

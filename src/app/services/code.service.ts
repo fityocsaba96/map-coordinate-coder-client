@@ -13,4 +13,8 @@ export class CodeService {
   public encode(coordinate: Coordinate, accuracy: number): Observable<any> {
     return this.http.post('/api/encode', { coordinate, accuracy });
   }
+
+  public decode(code: string): Observable<Coordinate> {
+    return this.http.post<Coordinate>('/api/decode', { code });
+  }
 }

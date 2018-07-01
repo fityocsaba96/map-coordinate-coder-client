@@ -1,0 +1,11 @@
+<h3 mat-subheader>Decode</h3>
+<form novalidate>
+  <mat-list-item>
+    <span mat-line>
+      <mat-form-field class="fullWidth">
+        <input matInput #code placeholder="Code" name="code" [value]="encoded ? encoded : ''">
+      </mat-form-field>
+    </span>
+    <button mat-raised-button color="primary" (click)="decode(code.value, $event)">OK</button>
+  </mat-list-item>
+</form>

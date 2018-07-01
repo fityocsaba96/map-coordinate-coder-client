@@ -3,13 +3,13 @@
   <mat-list-item>
     <span mat-line>
       <mat-form-field class="thirdWidth">
-        <input matInput #latitude placeholder="Latitude" name="latitude">
+        <input matInput #latitude placeholder="Latitude" name="latitude" [value]="decoded ? decoded.latitude : ''">
       </mat-form-field>
       <mat-form-field class="thirdWidth">
-        <input matInput #longitude placeholder="Longitude" name="longitude">
+        <input matInput #longitude placeholder="Longitude" name="longitude" [value]="decoded ? decoded.longitude : ''">
       </mat-form-field>
       <mat-form-field class="thirdWidth">
-        <input matInput #accuracy type="number" placeholder="Accuracy" name="accuracy" min="0" max="100">
+        <input matInput #accuracy type="number" placeholder="Accuracy" name="accuracy" min="0" max="100" [value]="code ? code.length : ''">
       </mat-form-field>
     </span>
     <button mat-raised-button color="primary" (click)="encode(latitude.value, longitude.value, accuracy.value, $event)">OK</button>
